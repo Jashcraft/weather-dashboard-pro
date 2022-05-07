@@ -13,14 +13,14 @@
   <title>Weather The Storm</title>
 </head>
 
-<body>
+<body class="bg-secondary">
   <header>
     <h1 class="bg-dark text-light"> Weather Dashboard </h1>
   </header>
   <div class="container">
     <div class="row ">
-      <section class="left-column col-3 bg-dark text-light border border-info">
-        <div class="city-search border border-danger">
+      <section class="left-column col-3 bg-dark text-light">
+        <div class="city-search">
           <h2>Search For A City</h2>
           <form id="user-form">
             <label for="city">City</label>
@@ -28,12 +28,19 @@
             <button type="submit" id="city-search-btn" class="btn">Get City</button>
           </form>
         </div>
-        <div class="saved-cities border border-danger"> This will contain previously selected cities to choose from
+        <div id="city-history" class="saved-cities "> 
         </div>
       </section>
-      <section class="right-column col-9 border border-info">
-        <div class="selected-city border border-danger">This will contain Selected City information</div>
-        <div class="5-day-forecast border border-danger">This will contain 5 day forcast for selected city </div>
+      <section class="right-column col-9">
+        <div class="selected-city border border-dark bg-dark text-light">
+          <h2 id="city-name"></h2>
+          <h4 id="current-date"></h4>
+          <p id="current-temp"></p>
+          <p id="current-wind"></p>
+          <p id="current-humidity"></p>
+          <p id="current-uv"></p>
+        </div>
+        <div id="forecast-container" class="5-day-forecast row bg-dark text-light"></div>
       </section>
     </div>
   </div>
